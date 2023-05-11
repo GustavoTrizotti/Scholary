@@ -1,18 +1,18 @@
+import { useState } from "react";
+
 const Home = () => {
-
-    const handleClick = (e) => {
-        console.log("You clicked me!", e.type);
-    }
-
-    const handleClickAgain = (name, e) => {
-        console.log("Hello " + name, e.target);
-    }
-
+    const [students, setStudents] = useState([
+        { id: 1, name: 'Gustavo Trizotti', email: 'gustavo@email.com' },
+        { id: 2, name: 'Teste', email: 'teste@email.com' },
+    ]);
     return ( 
         <div className="home">
-            <h2>Home page</h2>
-            <button onClick={handleClick}>Click me!</button>
-            <button onClick={(e) => handleClickAgain('Trizotti', e)}>Click me again!</button>
+            { students.map((student) => (
+                <div className="student-preview" key={student.id}>
+                    <h2>Student: {student.name}</h2>
+                    <p>E-mail: {student.email}</p>
+                </div>
+            )) }
         </div>
     );
 }

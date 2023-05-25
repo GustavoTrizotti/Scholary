@@ -15,7 +15,7 @@
   border-bottom: 1px solid #f2f2f2;
 }
 .navbar h1 {
-  color: #ffc06f;
+  color: #33ba96;
 }
 .navbar .links {
   margin-left: auto;
@@ -26,7 +26,7 @@
   padding: 6px;
 }
 .navbar a:hover {
-  color: #ffc06f;
+  color: #33ba96;
 }
 .content {
   max-width: 600px;
@@ -45,6 +45,6 @@
 }
 .student-preview h2 {
   font-size: 20px;
-  color: #ffc06f;
+  color: #33ba96;
   margin-bottom: 8px;
 }

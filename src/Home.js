@@ -1,18 +1,14 @@
-import { useState } from "react";
+import StudentList from "./StudentList";
+import useFetch from "./useFetch";
 
 const Home = () => {
-    const [students, setStudents] = useState([
-        { id: 1, name: 'Gustavo Trizotti', email: 'gustavo@email.com' },
-        { id: 2, name: 'Teste', email: 'teste@email.com' },
-    ]);
+    const {data: students, isPending, error} = useFetch('http://localhost:8000/students');
+
     return ( 
         <div className="home">
-            { students.map((student) => (
-                <div className="student-preview" key={student.id}>
-                    <h2>Student: {student.name}</h2>
-                    <p>E-mail: {student.email}</p>
-                </div>
-            )) }
+            {error && <div>{error}</div>}
+            {isPending && <div>Loading...</div>}
+            {students && <StudentList students={students} title="All Students"/>}
         </div>
     );
 }

@@ -48,3 +48,54 @@
   color: #33ba96;
   margin-bottom: 8px;
 }
+.student-list a {
+  text-decoration: none;
+}
+.student-details ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.student-details button {
+  background: #33ba96;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* register new blog form */
+.register {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.register label {
+  text-align: left;
+  display: block;
+  font-weight: bold;
+}
+.register h2 {
+  font-size: 20px;
+  color: #33ba96;
+  margin-bottom: 10px;
+}
+.register input {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.register button {
+  background: #33ba96;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
